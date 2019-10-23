@@ -25,6 +25,10 @@ $("#losses").html("Losses: " + losses);
 //display targetScore
 $("#target-score").html("Target Score: " + targetScore);
 $("#player-score").html("Player Score: " + playerScore);
+$("#red").html("<img src='" + crystals[0] + "'>");
+$("#blue").html("<img src='" + crystals[1] + "'>");
+$("#green").html("<img src='" + crystals[2] + "'>");
+$("#orange").html("<img src='" + crystals[3] + "'>");
 
 //create a loop that generates a random number between 1-12 and assign each random number to each of the 4 crystals
 function genCrystalVals(){
