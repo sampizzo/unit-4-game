@@ -15,7 +15,7 @@ var crystalValues = [];
 //generate random number between 19-120
 //assign random number to var targetScore
 function genTargetScore(){
-    var targetScore = Math.floor(Math.random() * 120) + 19;
+    targetScore = Math.floor(Math.random() * 120) + 19;
     console.log("targetScore: " + targetScore);
     $("#target-score").html("Target Score: " + targetScore);
 } 
@@ -56,8 +56,84 @@ $("#red").on("click", function(){
     playerScore = playerScore + crystalValues[0];
     console.log(playerScore);
     $("#player-score").html("Player Score: " + playerScore);
+        if (playerScore === targetScore){
+            console.log("ps: " + playerScore);
+            console.log("ts: " + targetScore);
+            alert("You win!");
+            win++;
+            $("#wins").html("Wins: " + wins);
+        }
+        if (playerScore > targetScore){
+            console.log("ps: " + playerScore);
+            console.log("ts: " + targetScore);
+            alert("Sorry! You lost!");
+            losses++;
+            $("#losses").html("Losses: " + losses);
+        }
 })
 
+$("#blue").on("click", function(){
+    console.log("red clicked");
+    playerScore = playerScore + crystalValues[1];
+    console.log(playerScore);
+    $("#player-score").html("Player Score: " + playerScore);
+        if (playerScore === targetScore){
+            console.log("ps: " + playerScore);
+            console.log("ts: " + targetScore);
+            alert("You win!");
+            win++;
+            $("#wins").html("Wins: " + wins);
+        }
+        if (playerScore > targetScore){
+            console.log("ps: " + playerScore);
+            console.log("ts: " + targetScore);
+            alert("Sorry! You lost!");
+            losses++;
+            $("#losses").html("Losses: " + losses);
+        }
+})
+
+$("#green").on("click", function(){
+    console.log("red clicked");
+    playerScore = playerScore + crystalValues[2];
+    console.log(playerScore);
+    $("#player-score").html("Player Score: " + playerScore);
+        if (playerScore === targetScore){
+            console.log("ps: " + playerScore);
+            console.log("ts: " + targetScore);
+            alert("You win!");
+            win++;
+            $("#wins").html("Wins: " + wins);
+        }
+        if (playerScore > targetScore){
+            console.log("ps: " + playerScore);
+            console.log("ts: " + targetScore);
+            alert("Sorry! You lost!");
+            losses++;
+            $("#losses").html("Losses: " + losses);
+        }
+})
+
+$("#orange").on("click", function(){
+    console.log("red clicked");
+    playerScore = playerScore + crystalValues[3];
+    console.log(playerScore);
+    $("#player-score").html("Player Score: " + playerScore);
+        if (playerScore === targetScore){
+            console.log("ps: " + playerScore);
+            console.log("ts: " + targetScore);
+            alert("You win!");
+            win++;
+            $("#wins").html("Wins: " + wins);
+        }
+        if (playerScore > targetScore){
+            console.log("ps: " + playerScore);
+            console.log("ts: " + targetScore);
+            alert("Sorry! You lost!");
+            losses++;
+            $("#losses").html("Losses: " + losses);
+        }
+})
 //if playerScore === targetScore, the player wins, increment wins, reset game
 
 //else if playerScore > targetScore, the player loses, increment losses, reset game
