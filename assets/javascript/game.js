@@ -11,10 +11,6 @@ var crystals = [
 ];
 
 var crystalValues = [];
-// var crystalOne;
-// var crystalTwo;
-// var crystalThree;
-// var crystalFour;
 
 
 //generate random number between 19-120
