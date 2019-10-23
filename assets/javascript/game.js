@@ -17,6 +17,7 @@ var crystalValues = [];
 function genTargetScore(){
     var targetScore = Math.floor(Math.random() * 120) + 19;
     console.log("targetScore: " + targetScore);
+    $("#target-score").html("Target Score: " + targetScore);
 } 
 
 
@@ -49,9 +50,13 @@ function resetGame(){
 genTargetScore();
 genCrystalVals();
 
-
-
 //clicking a crystal adds its hidden value to the playerScore
+$("#red").on("click", function(){
+    console.log("red clicked");
+    playerScore = playerScore + crystalValues[0];
+    console.log(playerScore);
+    $("#player-score").html("Player Score: " + playerScore);
+})
 
 //if playerScore === targetScore, the player wins, increment wins, reset game
 
