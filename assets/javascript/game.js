@@ -60,7 +60,7 @@ $("#red").on("click", function(){
             console.log("ps: " + playerScore);
             console.log("ts: " + targetScore);
             alert("You win!");
-            win++;
+            wins++;
             $("#wins").html("Wins: " + wins);
         }
         if (playerScore > targetScore){
@@ -81,7 +81,7 @@ $("#blue").on("click", function(){
             console.log("ps: " + playerScore);
             console.log("ts: " + targetScore);
             alert("You win!");
-            win++;
+            wins++;
             $("#wins").html("Wins: " + wins);
         }
         if (playerScore > targetScore){
@@ -102,7 +102,7 @@ $("#green").on("click", function(){
             console.log("ps: " + playerScore);
             console.log("ts: " + targetScore);
             alert("You win!");
-            win++;
+            wins++;
             $("#wins").html("Wins: " + wins);
         }
         if (playerScore > targetScore){
@@ -123,7 +123,7 @@ $("#orange").on("click", function(){
             console.log("ps: " + playerScore);
             console.log("ts: " + targetScore);
             alert("You win!");
-            win++;
+            wins++;
             $("#wins").html("Wins: " + wins);
         }
         if (playerScore > targetScore){
