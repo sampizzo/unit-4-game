@@ -11,6 +11,11 @@ var crystals = [
 ];
 
 var crystalValues = [];
+// var crystalOne;
+// var crystalTwo;
+// var crystalThree;
+// var crystalFour;
+
 
 //generate random number between 19-120
 //assign random number to var targetScore
@@ -32,6 +37,9 @@ $("#orange").html("<img src='" + crystals[3] + "'>");
 
 //create a loop that generates a random number between 1-12 and assign each random number to each of the 4 crystals
 function genCrystalVals() {
+  crystalValues = [];
+  //clear the array, so when you push you are starting from 0 again.
+  crystalValues.length = 0;
   for (var i = 0; i < 4; i++) {
     var randomNum = Math.floor(Math.random() * 12) + 1;
     console.log(randomNum);
@@ -42,7 +50,9 @@ function genCrystalVals() {
 //reset game values
 function resetGame() {
   playerScore = 0;
+  console.log("Player score: " + playerScore);
   $("#target-score").html("Target Score: " + targetScore);
+  $("#player-score").html("Player Score: " + playerScore);
   genTargetScore();
   genCrystalVals();
 }
@@ -53,7 +63,9 @@ genCrystalVals();
 //clicking a crystal adds its hidden value to the playerScore
 $("#red").on("click", function() {
   console.log("red clicked");
-  playerScore = playerScore + crystalValues[0];
+   playerScore = playerScore + crystalValues[0];
+  
+
   console.log(playerScore);
   $("#player-score").html("Player Score: " + playerScore);
   if (playerScore === targetScore) {
