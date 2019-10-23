@@ -1,11 +1,24 @@
 var wins = 0;
 var losses = 0;
+var targetScore = 0;
 var playerScore = 0;
+
+var crystals = [
+    "assets/images/rupee-red.png",
+    "assets/images/rupee-blue.png",
+    "assets/images/rupee-green.png",
+    "assets/images/rupee-orange.png"
+]
+
+var crystalValues = [];
 
 //generate random number between 19-120
 //assign random number to var targetScore
-var targetScore = Math.floor(Math.random() * 120) + 19;
-console.log("targetScore: " + targetScore);
+function genTargetScore(){
+    var targetScore = Math.floor(Math.random() * 120) + 19;
+    console.log("targetScore: " + targetScore);
+} 
+
 
 $("#wins").html("Wins: " + wins);
 $("#losses").html("Losses: " + losses);
@@ -13,8 +26,24 @@ $("#losses").html("Losses: " + losses);
 $("#target-score").html("Target Score: " + targetScore);
 $("#player-score").html("Player Score: " + playerScore);
 
-
 //create a loop that generates a random number between 1-12 and assign each random number to each of the 4 crystals
+function genCrystalVals(){
+    for (var i=0; i < 4; i++){
+        var randomNum = Math.floor(Math.random() * 12) + 1;
+        console.log(randomNum);
+        crystalValues.push(randomNum);
+    }
+}
+
+//reset game values
+function resetGame(){
+    playerScore = 0;
+    genTargetScore();
+    genCrystalVals();
+}
+
+genTargetScore();
+genCrystalVals();
 
 
 
